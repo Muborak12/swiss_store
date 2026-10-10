@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWISS_STORE — Ultra-Luxury Fashion Concierge</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            burgundy: {
+              950: '#190407',
+              900: '#22070B',
+              850: '#2A0A0F',
+              800: '#340D14',
+              700: '#4A141D',
+            },
+            gold: {
+              sunlight: '#F3E5AB',
+              light: '#E5C158',
+              base: '#D4AF37',
+              dark: '#B8860B',
+              deep: '#996F08',
+            },
+            powder: '#F7E5E7',
+            champagne: '#EAD2D4',
+            darkwine: '#22070B',
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          boxShadow: {
+            'gold-glow': '0px 0px 24px rgba(212, 175, 55, 0.45)',
+            'gold-glow-lg': '0px 0px 40px rgba(212, 175, 55, 0.6)',
+            'wine-depth': '0 20px 50px rgba(10, 2, 4, 0.85)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Gold Shimmer */
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .gold-shimmer-btn {
+      background: linear-gradient(90deg, #B8860B 0%, #D4AF37 25%, #FFF0B3 50%, #D4AF37 75%, #B8860B 100%);
+      background-size: 200% 100%;
+      animation: shimmer 4s infinite linear;
+    }
+    .gold-shimmer-btn:hover {
+      animation: shimmer 2s infinite linear;
+      box-shadow: 0px 0px 30px rgba(212, 175, 55, 0.6);
+    }
+    .wine-glass {
+      background: rgba(40, 10, 16, 0.72);
+      backdrop-filter: blur(40px);
+      -webkit-backdrop-filter: blur(40px);
+      border: 1px solid rgba(212, 175, 55, 0.22);
+    }
+    .wine-glass-hover:hover {
+      border-color: rgba(212, 175, 55, 0.65);
+      box-shadow: 0 10px 35px rgba(212, 175, 55, 0.2);
+    }
+    .gold-border-glow {
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .gold-border-glow:hover {
+      border-color: #D4AF37;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
+      transform: translateY(-3px);
+    }
+    .gold-text-gradient {
+      background: linear-gradient(135deg, #FFF1BD 0%, #D4AF37 50%, #AA7C11 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* Radial ambient backgrounds */
+    .hero-radial {
+      background: radial-gradient(circle at 50% 20%, rgba(74, 20, 29, 0.85) 0%, rgba(34, 7, 11, 0.95) 50%, #190407 100%);
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #190407;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4A141D;
+      border-radius: 4px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37;
+    }
+  </style>
+</head>
+<body class="bg-[#190407] text-champagne font-sans antialiased selection:bg-gold-base selection:text-darkwine overflow-x-hidden min-w-[310px]">
+
+  <!-- BACKGROUND AMBIENT PARTICLES / GLOW OVERLAY -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-red-900/20 blur-[130px] rounded-full"></div>
+    <div class="absolute top-[40%] -left-32 w-[600px] h-[600px] bg-yellow-600/10 blur-[150px] rounded-full"></div>
+    <div class="absolute top-[75%] -right-32 w-[600px] h-[600px] bg-red-900/15 blur-[160px] rounded-full"></div>
+  </div>
+
+  <div class="relative z-10 w-full max-w-[1440px] mx-auto px-3 sm:px-6 md:px-10 lg:px-16 transition-all duration-300">
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 01: THE MAJESTIC BRAND OVERTURE (Hero Brand Stage — No Header) -->
+    <!-- ========================================================================= -->
+    <section id="hero" class="relative pt-12 pb-24 md:pt-20 md:pb-32 flex flex-col items-center text-center">
+      <!-- High-Fashion Brand Centerpiece Reveal -->
+      <div class="inline-flex flex-col items-center mb-8 group cursor-pointer">
+        <span class="text-xs tracking-[0.45em] uppercase text-gold-base/80 mb-2 font-medium">Haute Couture &amp; Curated Vintage</span>
+        <div class="flex items-center space-x-3 sm:space-x-4">
+          <div class="h-[1px] w-8 sm:w-16 bg-gradient-to-r from-transparent to-gold-base"></div>
+          <h1 class="font-cinzel text-3xl sm:text-5xl md:text-6xl font-bold tracking-[0.25em] text-powder drop-shadow-lg">
+            SWISS_STORE
+          </h1>
+          <div class="h-[1px] w-8 sm:w-16 bg-gradient-to-l from-transparent to-gold-base"></div>
+        </div>
+        <div class="flex items-center space-x-2 mt-2">
+          <span class="h-[1px] w-4 bg-gold-base/40"></span>
+          <span class="font-serif italic text-xs sm:text-sm tracking-[0.3em] text-gold-light uppercase">estd 2026</span>
+          <span class="h-[1px] w-4 bg-gold-base/40"></span>
+        </div>
+      </div>
+
+      <!-- Main Headline -->
+      <div class="max-w-4xl mx-auto mb-6">
+        <h2 class="font-serif text-3xl sm:text-5xl md:text-[56px] leading-[1.15] font-bold text-powder mb-6 tracking-tight">
+          Xitoydan Eng Nafis Uslublar, Qulay Narxlar va <span class="font-serif italic gold-text-gradient">Pinterest Obrazlari</span>
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl text-champagne/90 font-light max-w-2xl mx-auto leading-relaxed">
+          Klassik nafosat, erkin street va saralangan nodir vintage kolleksiyalari to'g'ridan-to'g'ri eshigingizgacha.
+        </p>
+      </div>
+
+      <!-- Trust Badges (Golden Outline Glass Pills) -->
+      <div class="flex flex-wrap justify-center gap-2.5 sm:gap-4 mb-10 max-w-3xl">
+        <div class="wine-glass px-4 py-2 rounded-full text-xs sm:text-sm text-powder flex items-center space-x-2 border border-gold-base/30 shadow-sm">
+          <span class="text-gold-base font-bold">✦</span>
+          <span>Kargo To'lovi 0 So'm <strong class="text-gold-light font-medium">(Narx Ichida)</strong></span>
+        </div>
+        <div class="wine-glass px-4 py-2 rounded-full text-xs sm:text-sm text-powder flex items-center space-x-2 border border-gold-base/30 shadow-sm">
+          <span class="text-gold-base font-bold">✦</span>
+          <span>50% / 50% Xavfsiz To'lov Tizimi</span>
+        </div>
+        <div class="wine-glass px-4 py-2 rounded-full text-xs sm:text-sm text-powder flex items-center space-x-2 border border-gold-base/30 shadow-sm">
+          <span class="text-gold-base font-bold">✦</span>
+          <span>Avia Tezkor: <strong class="text-gold-light font-medium">7–10 Kun</strong></span>
+        </div>
+      </div>
+
+      <!-- Hero Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+        <a href="https://t.me/swiss_store_uz" target="_blank" rel="noopener noreferrer"
+           class="gold-shimmer-btn text-darkwine font-bold text-sm sm:text-base px-8 py-4 rounded-full tracking-wider uppercase transition-all duration-300 flex items-center justify-center space-x-3 w-full sm:w-auto group">
+          <span>Telegram Kanalga Kirish</span>
+          <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+        <a href="https://t.me/swiss_store_izohlar" target="_blank" rel="noopener noreferrer"
+           class="wine-glass hover:bg-burgundy-800 text-gold-base hover:text-gold-sunlight border-2 border-gold-base/40 hover:border-gold-base font-semibold text-sm sm:text-base px-8 py-3.5 rounded-full tracking-wider transition-all duration-300 w-full sm:w-auto flex items-center justify-center space-x-2">
+          <span>Mijozlar Fikrlari (Izohlar)</span>
+          <span class="text-xs bg-gold-base/20 px-2 py-0.5 rounded-full text-gold-light">5.0 ★</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 02: PINTEREST OUTFIT CONCIERGE (Vizual Qidiruv Xizmati) -->
+    <!-- ========================================================================= -->
+    <section class="py-16 border-t border-gold-base/15">
+      <div class="wine-glass rounded-3xl p-6 sm:p-10 md:p-14 border border-gold-base/30 relative overflow-hidden">
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-gold-base/10 blur-[100px] pointer-events-none rounded-full"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 text-left">
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-gold-base/10 border border-gold-base/30 text-gold-light text-xs uppercase tracking-widest mb-4">
+              <span class="w-2 h-2 rounded-full bg-gold-base animate-ping"></span>
+              <span>Eksklyuziv Xizmat</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-powder mb-4">
+              Pinterest &amp; Instagram Outfit Concierge
+            </h3>
+            <p class="text-champagne/90 text-sm sm:text-base leading-relaxed mb-6 font-light">
+              Pinterest yoki Instagram'da ko'rgan kiyimingiz skrinshotini yuboring — Xitoy fabrikalaridan eng hamyonbop narxda topib, sifatini tekshirib yetkazib beramiz.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3.5">
+              <a href="https://t.me/swiss_store_uz" target="_blank" rel="noopener noreferrer"
+                 class="gold-shimmer-btn text-darkwine font-bold px-7 py-3.5 rounded-full text-sm uppercase tracking-wider inline-flex items-center justify-center space-x-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                <span>O'z Obrazingizni Yuborish (Telegram)</span>
+              </a>
+              <span class="text-xs text-champagne/60 self-center">O'rtacha javob vaqti: 5–15 daqiqa</span>
+            </div>
+          </div>
+          
+          <!-- Mockup Visual Search Interface -->
+          <div class="lg:col-span-5">
+            <div class="bg-burgundy-950/80 rounded-2xl p-5 border border-gold-base/20 shadow-inner">
+              <div class="border-2 border-dashed border-gold-base/40 rounded-xl p-6 text-center hover:border-gold-base transition cursor-pointer group">
+                <div class="w-12 h-12 mx-auto rounded-full bg-gold-base/10 text-gold-base flex items-center justify-center mb-3 group-hover:scale-110 transition">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+                </div>
+                <h4 class="text-powder font-semibold text-sm mb-1">Skrinshotni bu yerga yuklang</h4>
+                <p class="text-xs text-champagne/60 mb-3">JPG, PNG yoki to'g'ridan-to'g'ri Pinterest havolasi</p>
+                <div class="inline-block px-4 py-1.5 bg-burgundy-800 text-gold-light rounded-lg text-xs font-mono border border-gold-base/30">
+                  AI + Stilist Fabrika Filtratsiyasi
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 03: ASYMMETRICAL LUXURY BENTO-GRID (Yangi 1-Noodatiy Bo'lim) -->
+    <!-- ========================================================================= -->
+    <section class="py-16 border-t border-gold-base/15">
+      <div class="text-center mb-12">
+        <span class="text-xs font-mono uppercase tracking-[0.3em] text-gold-base">Arxitektura &amp; Standartlar</span>
+        <h3 class="font-serif text-3xl sm:text-4xl font-bold text-powder mt-2">Bento-Grid Eksklyuziv Paneli</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 auto-rows-[220px]">
+        
+        <!-- Card 1 (Large 2x2 Feature) -->
+        <div class="md:col-span-2 md:row-span-2 wine-glass rounded-3xl p-7 gold-border-glow relative overflow-hidden flex flex-col justify-end group">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9XL-8fAtrAMqBSUtDULa-oRvsdkAHNmagZgCByJv8sVjDT7Aro22Szm5JQRDwkcHwh8PrJBtaczWF-tEPvrKuRoh24F8m-bon1qSUWNstKWc8CRVd0hJ9Rf7HpY3uoa6FUuxfhk4cfR5sB4itDJtrgx2MTNKEcZKj0uSvK3zruhaswrbi9nBLRgnWdAA82-LjWvztR0iqHESMGjpGjFACFfnbxJZA-h4eY1Vo-F3fSuhPm0qmECtb" alt="Mavsumiy Premium Kapsula" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-75 transition duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-burgundy-950 via-burgundy-950/40 to-transparent"></div>
+          <div class="relative z-10">
+            <span class="px-3 py-1 rounded-full bg-gold-base text-darkwine text-xs font-bold uppercase tracking-wider">Premium Kapsula</span>
+            <h4 class="font-serif text-2xl sm:text-3xl font-bold text-powder mt-3 mb-2">Baxmal &amp; Oltin Tikuvli Pidjak Ansambli</h4>
+            <p class="text-sm text-champagne/90 mb-4 max-w-md">Kuz-qish mavsumi uchun aristokratik siluet, qizil baxmal va qo'lda ishlangan zardo'zi detallar.</p>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-xs text-champagne/60 line-through">1,450,000 UZS</span>
+                <div class="text-xl font-bold text-gold-light">790,000 UZS <span class="text-xs font-normal text-powder/80">(Kargo ichida)</span></div>
+              </div>
+              <a href="https://t.me/swiss_store_uz" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-gold-base text-darkwine rounded-full font-bold text-xs uppercase hover:bg-gold-sunlight transition">Lukni ko'rish</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 (Wide Horizontal) -->
+        <div class="md:col-span-2 wine-glass rounded-3xl p-6 gold-border-glow flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <span class="text-xs uppercase tracking-widest text-gold-base font-semibold">Aniq O'lcham</span>
+            <span class="text-lg">📏</span>
+          </div>
+          <div>
+            <h4 class="font-serif text-xl font-bold text-powder mb-1">Xitoy O'lcham Konvertori</h4>
+            <p class="text-xs sm:text-sm text-champagne/80">Santimetr (sm) bo'yicha yelka, ko'krak va uzunlik aniq o'lchanadi. Noto'g'ri o'lcham kelish xavfi 0% ga tushirilgan.</p>
+          </div>
+          <div class="flex items-center space-x-2 text-xs text-gold-light">
+            <span>S • M • L • XL • 2XL Aniq Jadval</span>
+            <span>→</span>
+          </div>
+        </div>
+
+        <!-- Card 3 (Vertical / Accent) -->
+        <div class="wine-glass rounded-3xl p-6 gold-border-glow flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <span class="text-xs uppercase tracking-widest text-gold-base font-semibold">Nazorat</span>
+            <span class="text-lg">🎥</span>
+          </div>
+          <div>
+            <h4 class="font-serif text-lg font-bold text-powder mb-1">Jonli Telegram Video Nazorati</h4>
+            <p class="text-xs text-champagne/80">Har bir buyurtma Xitoy omboriga yetib kelgach, choklari va mato sifati video hisobot shaklida taqdim etiladi.</p>
+          </div>
+          <span class="text-[11px] text-gold-base font-mono">100% Shaffof jarayon</span>
+        </div>
+
+        <!-- Card 4 (Square Metric) -->
+        <div class="wine-glass rounded-3xl p-6 gold-border-glow flex flex-col justify-between bg-gradient-to-br from-burgundy-900 to-burgundy-950">
+          <div>
+            <span class="text-xs uppercase tracking-widest text-gold-base font-semibold">Bojxona &amp; Yetkazish</span>
+            <div class="text-3xl font-extrabold text-gold-light mt-2">0 So'm</div>
+          </div>
+          <p class="text-xs text-champagne/80">Hech qanday kutilmagan to'lovlar yo'q. Qabul qilishda bir tiyin ham ortiqcha to'lamaysiz.</p>
+          <div class="text-[11px] text-green-400 font-medium">✓ Narxga kiritilgan</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 04: CURATED STYLE ARCHIVE (3-Tab Dynamic Interactive Switcher) -->
+    <!-- ========================================================================= -->
+    <section class="py-16 border-t border-gold-base/15">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-[0.3em] text-gold-base">Lukbuk Arxiv</span>
+          <h3 class="font-serif text-3xl sm:text-4xl font-bold text-powder mt-1">Curated Style Archive</h3>
+        </div>
+        <div class="mt-4 md:mt-0 wine-glass px-4 py-2 rounded-full border border-gold-base/40 text-xs text-gold-light">
+          ✦ 1 ta to'liq obraz (look) tanlasangiz — Yetkazib berish butunlay <strong class="underline">BEPUL</strong>!
+        </div>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="flex flex-wrap gap-2.5 mb-8 border-b border-gold-base/20 pb-4">
+        <button onclick="filterLooks('all')" id="tab-all" class="look-tab active px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition bg-gold-base text-darkwine">
+          Barcha Kolleksiyalar
+        </button>
+        <button onclick="filterLooks('classic')" id="tab-classic" class="look-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition wine-glass text-champagne hover:text-gold-light">
+          Klassik Nafosat
+        </button>
+        <button onclick="filterLooks('street')" id="tab-street" class="look-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition wine-glass text-champagne hover:text-gold-light">
+          Zamonaviy Streetwear
+        </button>
+        <button onclick="filterLooks('vintage')" id="tab-vintage" class="look-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition wine-glass text-champagne hover:text-gold-light">
+          Nodir Vintage
+        </button>
+      </div>
+
+      <!-- Grid Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Look 1: Classic -->
+        <div class="look-item classic wine-glass rounded-3xl overflow-hidden gold-border-glow group flex flex-col justify-between">
+          <div class="relative aspect-square overflow-hidden bg-burgundy-950">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa7t_Yz_NaEFSwKFybYPPP4FsEYKXIYsgIbfJE1iMelKl4J5hPrzP-Pr0D1H9CrBmieHyuAV8m8RE1gZVZ3kCqz83wlylZTXDNzfwxlREoB9MkDlj7dWgpSx3JobL6fpu6LcgSJ5Bp0dlXG9V3tGpR3sz1yZ5WMR-KI9nbozxPVhG7vaDxLO9HO34spxeVcbWr4mGWRrRmr3TQnkorwGDcwU2wDfzHdsqgj1KOT_R799UCRjjZFPVK" alt="Old Money Wool Coat" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 left-3 bg-burgundy-950/80 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-gold-light border border-gold-base/30">
+              Klassika
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between">
+            <div>
+              <h4 class="font-serif text-lg font-bold text-powder mb-1">Old Money Camel Jun Palto</h4>
+              <p class="text-xs text-champagne/75 mb-3">Toshkent havosiga mos tuyajun mato va charm loferlar kombinatsiyasi.</p>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-sm font-bold text-gold-light">840,000 UZS</span>
+                <span class="text-[11px] text-green-300">Bepul Kuryer</span>
+              </div>
+              <a href="https://t.me/swiss_store_uz" target="_blank" rel="noopener noreferrer" class="block text-center w-full py-2 bg-gold-base hover:bg-gold-sunlight text-darkwine font-bold text-xs rounded-xl transition">
+                Buyurtma Qilish
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Look 2: Classic / Royal -->
+        <div class="look-item classic wine-glass rounded-3xl overflow-hidden gold-border-glow group flex flex-col justify-between">
+          <div class="relative aspect-square overflow-hidden bg-burgundy-950">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9XL-8fAtrAMqBSUtDULa-oRvsdkAHNmagZgCByJv8sVjDT7Aro22Szm5JQRDwkcHwh8PrJBtaczWF-tEPvrKuRoh24F8m-bon1qSUWNstKWc8CRVd0hJ9Rf7HpY3uoa6FUuxfhk4cfR5sB4itDJtrgx2MTNKEcZKj0uSvK3zruhaswrbi9nBLRgnWdAA82-LjWvztR0iqHESMGjpGjFACFfnbxJZA-h4eY1Vo-F3fSuhPm0qmECtb" alt="Royal Velvet Tailored Suit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 left-3 bg-burgundy-950/80 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-gold-light border border-gold-base/30">
+              Aristokratik
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between">
+            <div>
+              <h4 class="font-serif text-lg font-bold text-powder mb-1">Zardo'zi Baxmal Kostyum</h4>
+              <p class="text-xs text-champagne/75 mb-3">Maxsus tadbirlar va yuksak did egalari uchun qat'iy burchakli bichim.</p>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-sm font-bold text-gold-light">920,000 UZS</span>
+                <span class="text-[11px] text-gold-light">To'liq Luk</span>
+              </div>
+              <a href="https://t.me/swiss_store_uz" target="_blank" rel="noopener noreferrer" class="block text-center w-full py-2 bg-gold-base hover:bg-gold-sunlight text-darkwine font-bold text-xs rounded-xl transition">
+                Buyurtma Qilish
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Look 3: Streetwear -->
+        <div class="look-item street wine-glass rounded-3xl overflow-hidden gold-border-glow group flex flex-col justify-between">
+          <div class="relative aspect-square overflow-hidden bg-burgundy-950">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrSKSBoCjwiD0rqzgVC-pv2LZATAJ2Di5MveZ6MeRFwOeQdNtCoot_8jYHlTZjQsA5nPcgkR5Q3NPvHZRStVt3KOYtJjxxutdTzG0nd8SlJTOOiGnHovkLqQ6PcJktLOGK_xM5gOs_ibLZNZcSEiaWlPa7QJuQfiP-PhUt367lQZvZYxADfyRRiW1voaqoQhLwfKF4tYxncs5wsTgS3uY2HEyu2urXfe-AJWXsW5CBFcCqchKdqWMe" alt="Cyber Streetwear Jacket" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 left-3 bg-burgundy-950/80 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-gold-light border border-gold-base/30">
+              Streetwear
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between">
+            <div>
+              <h4 class="font-serif text-lg font-bold text-powder mb-1">Avant-Garde Qora-Burgundy Kurtka</h4>
+              <p class="text-xs text-champagne/75 mb-3">Suv o'tkazmaydigan membranali mato, keng shim va massiv etikli to'plam.</p>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-sm font-bold text-gold-light">680,000 UZS</span>
+                <span class="text-[11px] text-green-300">Trending</span>
+              </div>
+              <a href="https://t.me/swiss_store_uz" target="_blank" rel="noopener noreferrer" class="block text-center w-full py-2 bg-gold-base hover:bg-gold-sunlight text-darkwine font-bold text-xs rounded-xl transition">
+                Buyurtma Qilish
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Look 4: Vintage -->
+        <div class="look-item vintage wine-glass rounded-3xl overflow-hidden gold-border-glow group flex flex-col justify-between">
+          <div class="relative aspect-square overflow-hidden bg-burgundy-950">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzC2VB1mzynMi-3QCIjeyAamLXqIUp9qqy9X_xV756xdcQTHWJYrdE3vSM1i5bFNCJnNErXSymfXuly5EVR1GlcYZFnnNvPtcMILwj4ulfAJ-KF4f5nZsVZ52EqGrK8MVsXR-KMX1lwVdrEO1xcIlWEi91vGMXmOG6V-e170s4CvdcYu4VRKD-Qb7RWIrFe0TThiDr4hc8beudKV7JAlstf4IHhZRpSRoQ3oNA9Qnb3SHy37FoxG8Z" alt="Vintage Leather Bomber" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 left-3 bg-burgundy-950/80 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-gold-light border border-gold-base/30">
+              Vintage
+            </span>
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between">
+            <div>
+              <h4 class="font-serif text-lg font-bold text-powder mb-1">Vintage Charm Bomber &amp; Selvedge</h4>
+              <p class="text-xs text-champagne/75 mb-3">Eskirgan charm effekti, qalin paxtali jinsi va retro harbiy botinka.</p>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-sm font-bold text-gold-light">750,000 UZS</span>
+                <span class="text-[11px] text-gold-light">Nodir Nusxa</span>
+              </div>
+              <a href="https://t.me/swiss_store_uz" target="_blank" rel="noopener noreferrer" class="block text-center w-full py-2 bg-gold-base hover:bg-gold-sunlight text-darkwine font-bold text-xs rounded-xl transition">
+                Buyurtma Qilish
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 05: DEMOCRATIZED LUXURY (Hamyonbop Narxlar Kafolati) -->
+    <!-- ========================================================================= -->
+    <section class="py-16 border-t border-gold-base/15">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-mono uppercase tracking-[0.3em] text-gold-base">Adolatli Tijorat Falsafasi</span>
+        <h3 class="font-serif text-3xl sm:text-4xl font-bold text-powder mt-2">
+          Hashamatli Uslub — Qimmat Bo'lishi Shart Emas
+        </h3>
+        <p class="text-sm sm:text-base text-champagne/80 mt-3 font-light">
+          O'zbekistondagi do'konlar 200–300% gacha ustama qo'yishadi. Biz esa to'g'ridan-to'g'ri ishlab chiqaruvchi fabrikadan xarid qilamiz.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="wine-glass rounded-2xl p-7 text-center gold-border-glow">
+          <div class="w-14 h-14 mx-auto rounded-full bg-gold-base/15 text-gold-base flex items-center justify-center text-xl font-cinzel font-bold mb-4 border border-gold-base/30">
+            01
+          </div>
+          <h4 class="font-serif text-lg font-bold text-powder mb-2">To'g'ridan-to'g'ri Fabrikalar</h4>
+          <p class="text-xs sm:text-sm text-champagne/75 leading-relaxed">
+            Hech qanday vositachilar, dilerlar va qimmat savdo markazi ijarasi yo'q. Faqat asl narx.
+          </p>
+        </div>
+
+        <div class="wine-glass rounded-2xl p-7 text-center gold-border-glow">
+          <div class="w-14 h-14 mx-auto rounded-full bg-gold-base/15 text-gold-base flex items-center justify-center text-xl font-cinzel font-bold mb-4 border border-gold-base/30">
+            02
+          </div>
+          <h4 class="font-serif text-lg font-bold text-powder mb-2">Bozor Narxidan 40–60% Arzon</h4>
+          <p class="text-xs sm:text-sm text-champagne/75 leading-relaxed">
+            Bir xil sifatdagi libosni mahalliy butiklardan 2 barobar qulay narxda xarid qilasiz.
+          </p>
+        </div>
+
+        <div class="wine-glass rounded-2xl p-7 text-center gold-border-glow">
+          <div class="w-14 h-14 mx-auto rounded-full bg-gold-base/15 text-gold-base flex items-center justify-center text-xl font-cinzel font-bold mb-4 border border-gold-base/30">
+            03
+          </div>
+          <h4 class="font-serif text-lg font-bold text-powder mb-2">Kafolatlangan Material</h4>
+          <p class="text-xs sm:text-sm text-champagne/75 leading-relaxed">
+            Faqat sinovdan o'tgan paxta, tabiiy jun, sifatli furnitura va professional tikuvchilik.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 06: "FULL LOOK" SIGNATURE BONUS (To'liq Obraz Xarid Imtiyozi) -->
+    <!-- ========================================================================= -->
+    <section class="py-16 border-t border-gold-base/15">
+      <div class="wine-glass rounded-3xl p-8 sm:p-12 border-2 border-gold-base/40 relative overflow-hidden bg-gradient-to-r from-burgundy-950 via-burgundy-900 to-burgundy-950">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8">
+            <span class="inline-block px-3 py-1 bg-gold-base text-darkwine rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+              Maksimal Tejov Imtiyozi
+            </span>
+            <h3 class="font-serif text-2xl sm:text-4xl font-bold text-powder mb-4">
+              Boshdan-Oyoq To'liq "Look" — Bepul Yetkazib Berish!
+            </h3>
+            <p class="text-sm sm:text-base text-champagne/90 leading-relaxed mb-6 font-light">
+              Pidjak + shim + poyabzal + aksessuardan iborat yaxlit uyg'un obraz yig'ing va O'zbekistonning istalgan nuqtasiga kuryerlik yetkazib berish xizmatidan <strong class="text-gold-light">0 so'mga (MUTLAQO BEPUL)</strong> foydalaning!
+            </p>
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="https://t.me/swiss_store_uz" target="_blank" rel="noopener noreferrer"
+                 class="gold-shimmer-btn text-darkwine font-bold px-8 py-3.5 rounded-full text-sm uppercase tracking-wider">
+                To'liq Luk Tanlash (Telegram)
+              </a>
+              <span class="text-xs text-champagne/70">✦ Kuryer buyurtmani eshigingizgacha olib boradi</span>
+            </div>
+          </div>
+          <div class="lg:col-span-4 flex justify-center">
+            <div class="border border-gold-base/30 rounded-2xl p-5 bg-burgundy-950/60 text-center w-full max-w-xs">
+              <div class="text-3xl font-serif text-gold-base font-bold mb-1">0 UZS</div>
+              <div class="text-xs text-powder font-semibold uppercase tracking-wider mb-3">Kuryer Xizmati</div>
+              <div class="space-y-1.5 text-xs text-champagne/70 border-t border-gold-base/20 pt-3 text-left">
+                <div>✓ Pidjak / Kurtka</div>
+                <div>✓ Shim / Yubka</div>
+                <div>✓ Poyabzal / Lofer</div>
+                <div>✓ Aksessuar / Kamar</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 07: STAGGERED 3D FLOATING VIP CARDS (Yangi 2-Noodatiy Bo'lim) -->
+    <!-- ========================================================================= -->
+    <section class="py-20 border-t border-gold-base/15 overflow-hidden">
+      <div class="text-center mb-16">
+        <span class="text-xs font-mono uppercase tracking-[0.3em] text-gold-base">Eksklyuziv Fan-Deck</span>
+        <h3 class="font-serif text-3xl sm:text-4xl font-bold text-powder mt-2">
+          Staggered 3D VIP Lookbook
+        </h3>
+        <p class="text-xs sm:text-sm text-champagne/70 mt-2">Kartochkalar ustiga sichqonchani olib boring va ularning jozibador harakatini his eting</p>
+      </div>
+
+      <!-- Overlapping Staggered Cards Container -->
+      <div class="relative max-w-4xl mx-auto h-[480px] sm:h-[520px] flex items-center justify-center">
+        
+        <!-- Card 1 (Tilted -6deg) -->
+        <div class="absolute w-[240px] sm:w-[280px] md:w-[310px] rounded-2xl overflow-hidden wine-glass border border-gold-base/40 shadow-wine-depth -translate-x-28 sm:-translate-x-44 -rotate-6 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-500 cursor-pointer group">
+          <div class="h-64 overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzC2VB1mzynMi-3QCIjeyAamLXqIUp9qqy9X_xV756xdcQTHWJYrdE3vSM1i5bFNCJnNErXSymfXuly5EVR1GlcYZFnnNvPtcMILwj4ulfAJ-KF4f5nZsVZ52EqGrK8MVsXR-KMX1lwVdrEO1xcIlWEi91vGMXmOG6V-e170s4CvdcYu4VRKD-Qb7RWIrFe0TThiDr4hc8beudKV7JAlstf4IHhZRpSRoQ3oNA9Qnb3SHy37FoxG8Z" alt="Vintage Deck" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          </div>
+          <div class="p-4 bg-burgundy-950">
+            <span class="text-[10px] text-gold-light uppercase tracking-widest font-mono">Arxiv 01</span>
+            <h5 class="font-serif text-sm font-bold text-powder">Retro Bomber &amp; Raw Denim</h5>
+            <div class="text-xs text-gold-base font-bold mt-1">750,000 UZS</div>
+          </div>
+        </div>
+
+        <!-- Card 2 (Elevated Center 0deg) -->
+        <div class="absolute w-[250px] sm:w-[290px] md:w-[320px] rounded-2xl overflow-hidden wine-glass border-2 border-gold-base shadow-gold-glow z-20 hover:scale-105 hover:z-30 transition-all duration-500 cursor-pointer group">
+          <div class="h-72 overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa7t_Yz_NaEFSwKFybYPPP4FsEYKXIYsgIbfJE1iMelKl4J5hPrzP-Pr0D1H9CrBmieHyuAV8m8RE1gZVZ3kCqz83wlylZTXDNzfwxlREoB9MkDlj7dWgpSx3JobL6fpu6LcgSJ5Bp0dlXG9V3tGpR3sz1yZ5WMR-KI9nbozxPVhG7vaDxLO9HO34spxeVcbWr4mGWRrRmr3TQnkorwGDcwU2wDfzHdsqgj1KOT_R799UCRjjZFPVK" alt="Old Money Deck" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          </div>
+          <div class="p-4 bg-burgundy-950">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[10px] bg-gold-base text-darkwine px-2 py-0.5 rounded-full font-bold uppercase">Markaziy VIP</span>
+              <span class="text-xs text-gold-light font-bold">840,000 UZS</span>
+            </div>
+            <h5 class="font-serif text-sm sm:text-base font-bold text-powder">Old Money Wool Coat &amp; Loafers</h5>
+            <p class="text-[11px] text-champagne/70 mt-1">Aristokratik qulaylik va eng yuqori sifatli jun mato.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 (Tilted +6deg) -->
+        <div class="absolute w-[240px] sm:w-[280px] md:w-[310px] rounded-2xl overflow-hidden wine-glass border border-gold-base/40 shadow-wine-depth translate-x-28 sm:translate-x-44 rotate-6 hover:rotate-0 hover:scale-105 hover:z-30 transition-all duration-500 cursor-pointer group">
+          <div class="h-64 overflow-hidden">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrSKSBoCjwiD0rqzgVC-pv2LZATAJ2Di5MveZ6MeRFwOeQdNtCoot_8jYHlTZjQsA5nPcgkR5Q3NPvHZRStVt3KOYtJjxxutdTzG0nd8SlJTOOiGnHovkLqQ6PcJktLOGK_xM5gOs_ibLZNZcSEiaWlPa7QJuQfiP-PhUt367lQZvZYxADfyRRiW1voaqoQhLwfKF4tYxncs5wsTgS3uY2HEyu2urXfe-AJWXsW5CBFcCqchKdqWMe" alt="Cyber Street Deck" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          </div>
+          <div class="p-4 bg-burgundy-950">
+            <span class="text-[10px] text-gold-light uppercase tracking-widest font-mono">Arxiv 03</span>
+            <h5 class="font-serif text-sm font-bold text-powder">Cyber Street Hooded Set</h5>
+            <div class="text-xs text-gold-base font-bold mt-1">680,000 UZS</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 08: TRANSIT & LOGISTICS RADAR (Shaffof Yetkazib Berish Muddatlari) -->
+    <!-- ========================================================================= -->
+    <section class="py-16 border-t border-gold-base/15">
+      <div class="text-center mb-12">
+        <span class="text-xs font-mono uppercase tracking-[0.3em] text-gold-base">Tezkor &amp; Xavfsiz Tranzit</span>
+        <h3 class="font-serif text-3xl sm:text-4xl font-bold text-powder mt-2">
+          Yetkazib Berish Muddatlari va Kargo Kafolati
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
+        <!-- Karta A -->
+        <div class="wine-glass rounded-3xl p-8 gold-border-glow flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full bg-burgundy-800 text-champagne text-xs font-semibold">Standart Marshrut</span>
+              <span class="text-xl">🚛</span>
+            </div>
+            <div class="text-3xl sm:text-4xl font-serif font-bold text-gold-light mb-2">10 – 18 kun</div>
+            <p class="text-sm text-champagne/80 mb-4">Tejamkor, xavfsiz va tizimli yetkazish. Qishki qalin kiyimlar va katta posilkalar uchun qulay.</p>
+          </div>
+          <div class="text-xs text-gold-base font-mono border-t border-gold-base/20 pt-3">
+            Kargo to'lovi: 0 so'm (narx ichida)
+          </div>
+        </div>
+
+        <!-- Karta B -->
+        <div class="wine-glass rounded-3xl p-8 gold-border-glow border-2 border-gold-base/50 flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-gold-base text-darkwine text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+            Eng Ommabop
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full bg-gold-base/20 text-gold-light text-xs font-semibold">Tezkor Avia Reys</span>
+              <span class="text-xl">✈️</span>
+            </div>
+            <div class="text-3xl sm:text-4xl font-serif font-bold text-gold-light mb-2">7 – 10 kun (1 hafta)</div>
+            <p class="text-sm text-champagne/80 mb-4">Shoshilinch buyurtmalar, to'y va bayram tadbirlari uchun eng tezkor to'g'ridan-to'g'ri samolyot yetkazmasi.</p>
+          </div>
+          <div class="text-xs text-gold-base font-mono border-t border-gold-base/20 pt-3">
+            Kargo to'lovi: 0 so'm (narx ichida)
+          </div>
+        </div>
+      </div>
+
+      <!-- Reassurance Banner -->
+      <div class="max-w-3xl mx-auto text-center wine-glass p-4 rounded-2xl border border-gold-base/30">
+        <p class="text-xs sm:text-sm text-powder">
+          <span class="text-gold-base font-bold">Kafolat:</span> Kargo uchun alohida to'lov qilinmaydi! Barcha kargo va bojxona xarajatlari buyurtma narxi ichiga to'liq kiritilgan.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 09: BALANCED 50/50 PAYMENT ARCHITECTURE (Xavfsiz To'lov Tizimi) -->
+    <!-- ========================================================================= -->
+    <section class="py-16 border-t border-gold-base/15">
+      <div class="text-center mb-12">
+        <span class="text-xs font-mono uppercase tracking-[0.3em] text-gold-base">Moliyaviy Xavfsizlik</span>
+        <h3 class="font-serif text-3xl sm:text-4xl font-bold text-powder mt-2">
+          50% / 50% — Xavfsiz, Ishonchli va Halol To'lov
+        </h3>
+        <p class="text-xs sm:text-sm text-champagne/70 mt-2 max-w-xl mx-auto">
+          Mijoz manfaatini himoya qilish uchun to'liq summani oldindan olmaymiz.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- 1-Qadam -->
+        <div class="wine-glass rounded-3xl p-8 gold-border-glow">
+          <div class="flex items-center space-x-3 mb-4">
+            <span class="w-10 h-10 rounded-full bg-gold-base text-darkwine font-bold font-cinzel flex items-center justify-center text-sm">
+              50%
+            </span>
+            <h4 class="font-serif text-xl font-bold text-powder">1-Qadam: Rasmiylashtirish</h4>
+          </div>
+          <p class="text-sm text-champagne/80 leading-relaxed mb-4">
+            Buyurtma berilgan vaqtda mahsulot narxining 50 foizi to'lanadi. Shu zahoti buyurtma Xitoy fabrikasida sizning aniq o'lchamlaringiz bo'yicha band qilinadi.
+          </p>
+          <div class="text-xs text-gold-light">✓ Chek va buyurtma hujjati taqdim etiladi</div>
+        </div>
+
+        <!-- 2-Qadam -->
+        <div class="wine-glass rounded-3xl p-8 gold-border-glow">
+          <div class="flex items-center space-x-3 mb-4">
+            <span class="w-10 h-10 rounded-full bg-gold-base text-darkwine font-bold font-cinzel flex items-center justify-center text-sm">
+              50%
+            </span>
+            <h4 class="font-serif text-xl font-bold text-powder">2-Qadam: Tekshiruv va Topshirish</h4>
+          </div>
+          <p class="text-sm text-champagne/80 leading-relaxed mb-4">
+            Tovar O'zbekistonga yetib kelgach, qadoq to'liq tekshiriladi va Toshkent ofisimizdan sizga jo'natilishdan oldin (yoki qabulda) qolgan 50% to'lanadi.
+          </p>
+          <div class="text-xs text-gold-light">✓ 100% Xavfsiz xarid kafolati</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 10: RUNWAY & STREET CAROUSEL (Mavsumiy Obrazlar Slayderi) -->
+    <!-- ========================================================================= -->
+    <section class="py-16 border-t border-gold-base/15">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-[0.3em] text-gold-base">Podium &amp; Shahar</span>
+          <h3 class="font-serif text-3xl sm:text-4xl font-bold text-powder mt-1">Runway &amp; Street Slayderi</h3>
+        </div>
+        <div class="flex space-x-3 mt-4 sm:mt-0">
+          <button onclick="scrollCarousel(-1)" class="w-11 h-11 rounded-full wine-glass border border-gold-base/40 text-gold-base hover:bg-gold-base hover:text-darkwine transition flex items-center justify-center">
+            ←
+          </button>
+          <button onclick="scrollCarousel(1)" class="w-11 h-11 rounded-full wine-glass border border-gold-base/40 text-gold-base hover:bg-gold-base hover:text-darkwine transition flex items-center justify-center">
+            →
+          </button>
+        </div>
+      </div>
+
+      <!-- Carousel Container -->
+      <div id="runway-carousel" class="flex space-x-6 overflow-x-auto pb-6 scrollbar-none snap-x snap-mandatory scroll-smooth">
+        
+        <!-- Slide 1 -->
+        <div class="min-w-[280px] sm:min-w-[340px] snap-start wine-glass rounded-3xl p-4 gold-border-glow flex flex-col justify-between">
+          <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-4">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9XL-8fAtrAMqBSUtDULa-oRvsdkAHNmagZgCByJv8sVjDT7Aro22Szm5JQRDwkcHwh8PrJBtaczWF-tEPvrKuRoh24F8m-bon1qSUWNstKWc8CRVd0hJ9Rf7HpY3uoa6FUuxfhk4cfR5sB4itDJtrgx2MTNKEcZKj0uSvK3zruhaswrbi9nBLRgnWdAA82-LjWvztR0iqHESMGjpGjFACFfnbxJZA-h4eY1Vo-F3fSuhPm0qmECtb" alt="Look 1" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <div class="flex justify-between items-center mb-1">
+              <h5 class="font-serif font-bold text-powder text-base">Burgundy Zardo'zi Kostyum</h5>
+              <span class="text-sm font-bold text-gold-light">790,000 UZS</span>
+            </div>
+            <p class="text-xs text-champagne/70 mb-4">Shaxsiy o'lchovlar asosida buyurtma</p>
+            <a href="https://t.me/swiss_store_uz" target="_blank" rel="noopener noreferrer" class="block text-center w-full py-2.5 bg-gold-base hover:bg-gold-sunlight text-darkwine rounded-xl font-bold text-xs uppercase transition">
+              Telegramda Buyurtma Berish
+            </a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="min-w-[280px] sm:min-w-[340px] snap-start wine-glass rounded-3xl p-4 gold-border-glow flex flex-col justify-between">
+          <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-4">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa7t_Yz_NaEFSwKFybYPPP4FsEYKXIYsgIbfJE1iMelKl4J5hPrzP-Pr0D1H9CrBmieHyuAV8m8RE1gZVZ3kCqz83wlylZTXDNzfwxlREoB9MkDlj7dWgpSx3JobL6fpu6LcgSJ5Bp0dlXG9V3tGpR3sz1yZ5WMR-KI9nbozxPVhG7vaDxLO9HO34spxeVcbWr4mGWRrRmr3TQnkorwGDcwU2wDfzHdsqgj1KOT_R799UCRjjZFPVK" alt="Look 2" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <div class="flex justify-between items-center mb-1">
+              <h5 class="font-serif font-bold text-powder text-base">Camel Kashmer Palto</h5>
+              <span class="text-sm font-bold text-gold-light">840,000 UZS</span>
+            </div>
+            <p class="text-xs text-champagne/70 mb-4">Eng sifatli jun, qulay bichim</p>
+            <a href="https://t.me/swiss_store_uz" target="_blank" rel="noopener noreferrer" class="block text-center w-full py-2.5 bg-gold-base hover:bg-gold-sunlight text-darkwine rounded-xl font-bold text-xs uppercase transition">
+              Telegramda Buyurtma Berish
+            </a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="min-w-[280px] sm:min-w-[340px] snap-start wine-glass rounded-3xl p-4 gold-border-glow flex flex-col justify-between">
+          <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-4">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrSKSBoCjwiD0rqzgVC-pv2LZATAJ2Di5MveZ6MeRFwOeQdNtCoot_8jYHlTZjQsA5nPcgkR5Q3NPvHZRStVt3KOYtJjxxutdTzG0nd8SlJTOOiGnHovkLqQ6PcJktLOGK_xM5gOs_ibLZNZcSEiaWlPa7QJuQfiP-PhUt367lQZvZYxADfyRRiW1voaqoQhLwfKF4tYxncs5wsTgS3uY2HEyu2urXfe-AJWXsW5CBFcCqchKdqWMe" alt="Look 3" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <div class="flex justify-between items-center mb-1">
+              <h5 class="font-serif font-bold text-powder text-base">Cyber Street Anorak</h5>
+              <span class="text-sm font-bold text-gold-light">680,000 UZS</span>
+            </div>
+            <p class="text-xs text-champagne/70 mb-4">Qulaylik va erkin ko'cha ritmi</p>
+            <a href="https://t.me/swiss_store_uz" target="_blank" rel="noopener noreferrer" class="block text-center w-full py-2.5 bg-gold-base hover:bg-gold-sunlight text-darkwine rounded-xl font-bold text-xs uppercase transition">
+              Telegramda Buyurtma Berish
+            </a>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="min-w-[280px] sm:min-w-[340px] snap-start wine-glass rounded-3xl p-4 gold-border-glow flex flex-col justify-between">
+          <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-4">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzC2VB1mzynMi-3QCIjeyAamLXqIUp9qqy9X_xV756xdcQTHWJYrdE3vSM1i5bFNCJnNErXSymfXuly5EVR1GlcYZFnnNvPtcMILwj4ulfAJ-KF4f5nZsVZ52EqGrK8MVsXR-KMX1lwVdrEO1xcIlWEi91vGMXmOG6V-e170s4CvdcYu4VRKD-Qb7RWIrFe0TThiDr4hc8beudKV7JAlstf4IHhZRpSRoQ3oNA9Qnb3SHy37FoxG8Z" alt="Look 4" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <div class="flex justify-between items-center mb-1">
+              <h5 class="font-serif font-bold text-powder text-base">Retro Bomber &amp; Selvedge</h5>
+              <span class="text-sm font-bold text-gold-light">750,000 UZS</span>
+            </div>
+            <p class="text-xs text-champagne/70 mb-4">Eskirmaydigan vintage jozibasi</p>
+            <a href="https://t.me/swiss_store_uz" target="_blank" rel="noopener noreferrer" class="block text-center w-full py-2.5 bg-gold-base hover:bg-gold-sunlight text-darkwine rounded-xl font-bold text-xs uppercase transition">
+              Telegramda Buyurtma Berish
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 11: THE SWISS_STORE PILLARS (Nega Aynan Biz?) -->
+    <!-- ========================================================================= -->
+    <section class="py-16 border-t border-gold-base/15">
+      <div class="text-center mb-12">
+        <span class="text-xs font-mono uppercase tracking-[0.3em] text-gold-base">Ustunliklarimiz</span>
+        <h3 class="font-serif text-3xl sm:text-4xl font-bold text-powder mt-2">
+          The SWISS_STORE Pillars
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="wine-glass rounded-2xl p-6 gold-border-glow">
+          <div class="text-2xl mb-3 text-gold-base">💎</div>
+          <h4 class="font-serif text-base font-bold text-powder mb-2">01. Saralangan Sifat</h4>
+          <p class="text-xs text-champagne/75 leading-relaxed">Arzon sintetik buyumlar yo'q. Faqat sinovdan o'tgan premium materiallar saralanadi.</p>
+        </div>
+
+        <div class="wine-glass rounded-2xl p-6 gold-border-glow">
+          <div class="text-2xl mb-3 text-gold-base">🔍</div>
+          <h4 class="font-serif text-base font-bold text-powder mb-2">02. Pinterest Analogi</h4>
+          <p class="text-xs text-champagne/75 leading-relaxed">Tasavvuringizdagi istalgan obrazni skrinshot orqali topib berish imkoniyati.</p>
+        </div>
+
+        <div class="wine-glass rounded-2xl p-6 gold-border-glow">
+          <div class="text-2xl mb-3 text-gold-base">📦</div>
+          <h4 class="font-serif text-base font-bold text-powder mb-2">03. Nol Qo'shimcha Kargo</h4>
+          <p class="text-xs text-champagne/75 leading-relaxed">Kargo og'irligi yoki o'lchami uchun kutilmagan ustamalar olinmaydi.</p>
+        </div>
+
+        <div class="wine-glass rounded-2xl p-6 gold-border-glow">
+          <div class="text-2xl mb-3 text-gold-base">🤝</div>
+          <h4 class="font-serif text-base font-bold text-powder mb-2">04. 24/7 Shaxsiy Kuzatuv</h4>
+          <p class="text-xs text-champagne/75 leading-relaxed">Telegram menejeringiz xarid bosqichidan to eshigingizgacha shaxsan aloqada.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 12: VERIFIED SOCIAL PROOF & TELEGRAM REVIEWS (Mijozlar Fikrlari) -->
+    <!-- ========================================================================= -->
+    <section class="py-16 border-t border-gold-base/15">
+      <div class="text-center mb-12">
+        <span class="text-xs font-mono uppercase tracking-[0.3em] text-gold-base">Jonli Isbotlar</span>
+        <h3 class="font-serif text-3xl sm:text-4xl font-bold text-powder mt-2">
+          Mijozlarimizning Haqiqiy Taassurotlari va Olingan Buyurtmalar
+        </h3>
+        <p class="text-xs sm:text-sm text-champagne/75 mt-2">
+          Telegram kanalimiz va <a href="https://t.me/swiss_store_izohlar" target="_blank" class="text-gold-light underline">@swiss_store_izohlar</a> dagi samimiy fikrlar
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <!-- Review 1 -->
+        <div class="wine-glass rounded-2xl p-6 gold-border-glow">
+          <div class="flex items-center space-x-3 mb-3">
+            <div class="w-10 h-10 rounded-full bg-gold-base/20 border border-gold-base/40 text-gold-light font-bold flex items-center justify-center text-sm">
+              M
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-powder">Madina R. (Toshkent)</h5>
+              <div class="text-gold-light text-xs">★★★★★ 5.0</div>
+            </div>
+          </div>
+          <p class="text-xs text-champagne/85 leading-relaxed italic">
+            "Pinterestdan topgan paltoimni yuborgandim, roppa-rosa 8 kunda yetib keldi! Matosi juda yumshoq, o'lchami sm bo'yicha bir xil tushdi. Eng asosiysi kargoga ortiqcha 1 so'm ham so'rashmadi."
+          </p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="wine-glass rounded-2xl p-6 gold-border-glow">
+          <div class="flex items-center space-x-3 mb-3">
+            <div class="w-10 h-10 rounded-full bg-gold-base/20 border border-gold-base/40 text-gold-light font-bold flex items-center justify-center text-sm">
+              J
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-powder">Jasur K. (Samarqand)</h5>
+              <div class="text-gold-light text-xs">★★★★★ 5.0</div>
+            </div>
+          </div>
+          <p class="text-xs text-champagne/85 leading-relaxed italic">
+            "50/50 to'lov tizimi juda ishonchli bo'ldi. Avvaliga sal ikkilangandim, lekin ombordan video tekshiruv yuborishganda ko'nglim to'ldi. Retro bomber kurtka zo'r chiqdi."
+          </p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="wine-glass rounded-2xl p-6 gold-border-glow">
+          <div class="flex items-center space-x-3 mb-3">
+            <div class="w-10 h-10 rounded-full bg-gold-base/20 border border-gold-base/40 text-gold-light font-bold flex items-center justify-center text-sm">
+              D
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-powder">Dildora S. (Farg'ona)</h5>
+              <div class="text-gold-light text-xs">★★★★★ 5.0</div>
+            </div>
+          </div>
+          <p class="text-xs text-champagne/85 leading-relaxed italic">
+            "To'liq luk (kostyum + lofer) olgandim, kuryer eshigimgacha mutlaqo tekinga yetkazib berdi. Mahalliy bozorlardagidan 2 barobar arzon tushdi."
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="https://t.me/swiss_store_izohlar" target="_blank" rel="noopener noreferrer"
+           class="gold-shimmer-btn text-darkwine font-bold px-8 py-3.5 rounded-full text-xs sm:text-sm uppercase tracking-wider inline-flex items-center space-x-2">
+          <span>Barcha Jonli Izohlarni Ko'rish (@swiss_store_izohlar)</span>
+          <span>→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 13: 3-STEP EFFORTLESS ORDER BLUEPRINT (Buyurtma Berish Tartibi) -->
+    <!-- ========================================================================= -->
+    <section class="py-16 border-t border-gold-base/15">
+      <div class="text-center mb-12">
+        <span class="text-xs font-mono uppercase tracking-[0.3em] text-gold-base">Sodda Algoritm</span>
+        <h3 class="font-serif text-3xl sm:text-4xl font-bold text-powder mt-2">
+          Qanday Qilib Buyurtma Beriladi?
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="wine-glass rounded-3xl p-7 gold-border-glow text-center">
+          <div class="text-3xl font-cinzel font-extrabold text-gold-light mb-3">01</div>
+          <h4 class="font-serif text-lg font-bold text-powder mb-2">Lukni Tanlang</h4>
+          <p class="text-xs sm:text-sm text-champagne/80">Pinterest, Instagram yoki bizning Telegram kanalimizdan o'zingizga yoqqan kiyimni tanlang.</p>
+        </div>
+
+        <div class="wine-glass rounded-3xl p-7 gold-border-glow text-center border-2 border-gold-base/40">
+          <div class="text-3xl font-cinzel font-extrabold text-gold-light mb-3">02</div>
+          <h4 class="font-serif text-lg font-bold text-powder mb-2">Skrinshot &amp; 50% To'lov</h4>
+          <p class="text-xs sm:text-sm text-champagne/80">Rasm va parametrlaringizni menejerga yuboring. O'lcham tekshirilgach, 50% boshlang'ich to'lov qilinadi.</p>
+        </div>
+
+        <div class="wine-glass rounded-3xl p-7 gold-border-glow text-center">
+          <div class="text-3xl font-cinzel font-extrabold text-gold-light mb-3">03</div>
+          <h4 class="font-serif text-lg font-bold text-powder mb-2">Qabul &amp; Yakuniy To'lov</h4>
+          <p class="text-xs sm:text-sm text-champagne/80">Posilka Toshkentga yetib kelgach tekshiriladi, sizga yetkaziladi va qolgan 50% to'lanadi.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 14: INTERACTIVE LUXURY FAQ (Ko'p Beriladigan Savollar) -->
+    <!-- ========================================================================= -->
+    <section class="py-16 border-t border-gold-base/15">
+      <div class="text-center mb-12">
+        <span class="text-xs font-mono uppercase tracking-[0.3em] text-gold-base">Shubhalarga O'rin Yo'q</span>
+        <h3 class="font-serif text-3xl sm:text-4xl font-bold text-powder mt-2">
+          Ko'p Beriladigan Savollar
+        </h3>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        <!-- FAQ Item 1 -->
+        <div class="wine-glass rounded-2xl overflow-hidden border border-gold-base/30">
+          <button onclick="toggleFaq(1)" class="w-full p-5 text-left flex justify-between items-center text-powder font-semibold text-sm sm:text-base">
+            <span>Pinterest'dagi obrazni qanday qilib topib berasiz?</span>
+            <span id="faq-icon-1" class="text-gold-base font-bold text-lg transition-transform duration-300">+</span>
+          </button>
+          <div id="faq-ans-1" class="hidden px-5 pb-5 text-xs sm:text-sm text-champagne/80 border-t border-gold-base/15 pt-3">
+            Siz shunchaki o'zingiz yoqtirgan kiyim yoki obraz skrinshotini menejerimizga yuborasiz. Mutaxassislarimiz to'g'ridan-to'g'ri Xitoydagi sara fabrikalar ichidan eng sifatli va eng arzon variantni topib, narxi va o'lchamlarini sizga ma'lum qiladi.
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="wine-glass rounded-2xl overflow-hidden border border-gold-base/30">
+          <button onclick="toggleFaq(2)" class="w-full p-5 text-left flex justify-between items-center text-powder font-semibold text-sm sm:text-base">
+            <span>Kargo uchun rostdan ham ortiqcha to'lov yo'qmi?</span>
+            <span id="faq-icon-2" class="text-gold-base font-bold text-lg transition-transform duration-300">+</span>
+          </button>
+          <div id="faq-ans-2" class="hidden px-5 pb-5 text-xs sm:text-sm text-champagne/80 border-t border-gold-base/15 pt-3">
+            Ha, mutlaqo yo'q! Bizda barcha xalqaro va ichki transport, bojxona xarajatlari buyurtma aytilgan paytdagi yakuniy narx ichiga to'liq kiritilgan. Tovar kelganda kargo uchun alohida pul to'lamaysiz.
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="wine-glass rounded-2xl overflow-hidden border border-gold-base/30">
+          <button onclick="toggleFaq(3)" class="w-full p-5 text-left flex justify-between items-center text-powder font-semibold text-sm sm:text-base">
+            <span>To'liq luk olsam yetkazish qanday qilib bepul bo'ladi?</span>
+            <span id="faq-icon-3" class="text-gold-base font-bold text-lg transition-transform duration-300">+</span>
+          </button>
+          <div id="faq-ans-3" class="hidden px-5 pb-5 text-xs sm:text-sm text-champagne/80 border-t border-gold-base/15 pt-3">
+            Agar siz 1 ta to'liq obraz (masalan: ustki kiyim + shim + oyoq kiyim yoki aksessuar) xarid qilsangiz, butun O'zbekiston bo'ylab uyingiz eshigigacha bo'lgan kuryer xizmati SWISS_STORE hisobidan to'liq qoplab beriladi (0 so'm).
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="wine-glass rounded-2xl overflow-hidden border border-gold-base/30">
+          <button onclick="toggleFaq(4)" class="w-full p-5 text-left flex justify-between items-center text-powder font-semibold text-sm sm:text-base">
+            <span>O'lcham to'g'ri kelishiga qanday kafolat bor?</span>
+            <span id="faq-icon-4" class="text-gold-base font-bold text-lg transition-transform duration-300">+</span>
+          </button>
+          <div id="faq-ans-4" class="hidden px-5 pb-5 text-xs sm:text-sm text-champagne/80 border-t border-gold-base/15 pt-3">
+            Biz standart S/M/L harflariga tayanmaymiz. Menejerimiz sizdan bo'y, vazn, yelka kengligi va ko'krak aylanangizni santimetr (sm) larda olib, fabrika jadvaliga 1:1 solishtiradi.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 15: MONUMENTAL FOOTER & SOCIAL CONNECT HUB -->
+    <!-- ========================================================================= -->
+    <footer class="pt-20 pb-14 border-t border-gold-base/20 relative overflow-hidden">
+      <!-- Watermark Background -->
+      <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 whitespace-nowrap opacity-[0.04] pointer-events-none select-none font-cinzel text-[100px] sm:text-[140px] md:text-[180px] font-black text-gold-base">
+        SWISS_STORE
+      </div>
+
+      <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-10 mb-14">
+        <!-- Store Bio -->
+        <div class="md:col-span-5 text-left">
+          <h4 class="font-cinzel text-2xl font-bold tracking-[0.2em] text-powder mb-2">SWISS_STORE</h4>
+          <div class="text-xs uppercase font-serif tracking-[0.3em] text-gold-light mb-4">estd 2026</div>
+          <p class="text-xs sm:text-sm text-champagne/80 leading-relaxed font-light max-w-sm mb-6">
+            SWISS_STORE — 2026 yildan buyon eng sara xalqaro uslublar, Pinterest obrazlari va vintage klassikani yetkazib beruvchi ishonchli manzil.
+          </p>
+          <div class="flex items-center space-x-2 text-xs text-gold-base">
+            <span>✦ Kargo 0 so'm</span>
+            <span>•</span>
+            <span>✦ 50/50 Xavfsiz To'lov</span>
+          </div>
+        </div>
+
+        <!-- Social Action Cards -->
+        <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          
+          <a href="https://t.me/swiss_store_uz" target="_blank" rel="noopener noreferrer"
+             class="wine-glass rounded-2xl p-5 gold-border-glow flex flex-col justify-between group">
+            <div>
+              <div class="text-xl mb-2 text-gold-base">✈️</div>
+              <h5 class="text-sm font-bold text-powder mb-1">Telegram Kanal</h5>
+              <p class="text-[11px] text-champagne/70">Katalog va har kungi yangi obrazlar</p>
+            </div>
+            <span class="text-xs text-gold-light mt-4 font-semibold group-hover:translate-x-1 transition inline-block">@swiss_store_uz →</span>
+          </a>
+
+          <a href="https://t.me/swiss_store_izohlar" target="_blank" rel="noopener noreferrer"
+             class="wine-glass rounded-2xl p-5 gold-border-glow flex flex-col justify-between group">
+            <div>
+              <div class="text-xl mb-2 text-gold-base">💬</div>
+              <h5 class="text-sm font-bold text-powder mb-1">Mijozlar Fikrlari</h5>
+              <p class="text-[11px] text-champagne/70">Haqiqiy sharhlar va skrinshotlar</p>
+            </div>
+            <span class="text-xs text-gold-light mt-4 font-semibold group-hover:translate-x-1 transition inline-block">@swiss_store_izohlar →</span>
+          </a>
+
+          <a href="https://www.instagram.com/swiss_store_uz?obrf=NGw4Nno1cnl6eGNt" target="_blank" rel="noopener noreferrer"
+             class="wine-glass rounded-2xl p-5 gold-border-glow flex flex-col justify-between group">
+            <div>
+              <div class="text-xl mb-2 text-gold-base">📸</div>
+              <h5 class="text-sm font-bold text-powder mb-1">Instagram</h5>
+              <p class="text-[11px] text-champagne/70">Estetik reels va lookbook videolari</p>
+            </div>
+            <span class="text-xs text-gold-light mt-4 font-semibold group-hover:translate-x-1 transition inline-block">@swiss_store_uz →</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Bottom Copyright & Back to Top -->
+      <div class="border-t border-gold-base/15 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-champagne/60 gap-4">
+        <div>
+          © 2026 SWISS_STORE. Barcha huquqlar himoyalangan.
+        </div>
+        <div class="flex items-center space-x-6">
+          <a href="#hero" class="text-gold-light hover:underline flex items-center space-x-1">
+            <span>Yuqoriga qaytish</span>
+            <span>↑</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- INTERACTIVE SCRIPTS -->
+  <script>
+    // Tab Filter for Lookbook Archive
+    function filterLooks(category) {
+      const tabs = document.querySelectorAll('.look-tab');
+      tabs.forEach(tab => {
+        tab.classList.remove('bg-gold-base', 'text-darkwine');
+        tab.classList.add('wine-glass', 'text-champagne');
+      });
+      const activeTab = document.getElementById('tab-' + category);
+      if (activeTab) {
+        activeTab.classList.remove('wine-glass', 'text-champagne');
+        activeTab.classList.add('bg-gold-base', 'text-darkwine');
+      }
+
+      const items = document.querySelectorAll('.look-item');
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Horizontal Carousel Scroll
+    function scrollCarousel(direction) {
+      const container = document.getElementById('runway-carousel');
+      if (container) {
+        container.scrollBy({ left: direction * 350, behavior: 'smooth' });
+      }
+    }
+
+    // FAQ Accordion Toggle
+    function toggleFaq(id) {
+      const ans = document.getElementById('faq-ans-' + id);
+      const icon = document.getElementById('faq-icon-' + id);
+      if (ans.classList.contains('hidden')) {
+        ans.classList.remove('hidden');
+        icon.textContent = '−';
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        ans.classList.add('hidden');
+        icon.textContent = '+';
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+  </script>
+</body>
+</html>
